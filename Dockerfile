@@ -1,8 +1,8 @@
 FROM node:lts
 
-MAINTAINER Raphael Ribeiro <raphael.rab.ribeiro@gmail.com>
+LABEL Raphael Ribeiro <raphael.rab.ribeiro@gmail.com>
 
-WORKDIR /
+WORKDIR /app
 
 COPY . .
 
