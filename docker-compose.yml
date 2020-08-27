@@ -1,15 +1,22 @@
 version: "3.8"
-networks:
-    default:
-        name: lab-docker-node-express
 services:
     app:
         build: .
         image: lab-docker-node-express
         container_name: lab-docker-node-express
         restart: always
+        networks:
+            - lab
         ports:
             - 8001:3000
         volumes: 
-            - ./:/app
+            - .:/app
+            - node_modules:/app/node_modules
 
+networks:
+    lab:
+        name: lab
+
+volumes:
+    node_modules:
+        name: ldne-node-modules
