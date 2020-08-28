@@ -5,7 +5,7 @@ services:
         image: lab-docker-node-express
         container_name: lab-docker-node-express
         restart: always
-        command: /app/node_modules/.bin/nodemon --exec npm start --ext jade
+        command: /app/node_modules/.bin/nodemon --exec npm start
         networks:
             - lab
         ports:
